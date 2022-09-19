@@ -1,10 +1,6 @@
 import { useEffect, useState } from "react";
 
 export default function useGetUsers(pageId = 2) {
-  console.log(
-    "🚀 ~ file: use-getUsers.js ~ line 4 ~ useGetUsers ~ pageId",
-    pageId
-  );
   const [error, setError] = useState({ isError: false, message: "" });
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState();

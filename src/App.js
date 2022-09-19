@@ -5,10 +5,10 @@ import UserDataContainer from "./Components/UserDataContainer";
 function App() {
   const [page, setPage] = useState(1);
   return (
-    <div className="container p-5 h-100">
+    <div className="container-fluid p-5 h-100">
       <UserDataContainer page={page} />
 
-      <div className="row justify-content-md-center">
+      <div className="row justify-content-center">
         <button
           type="button"
           onClick={() => {

@@ -14,26 +14,21 @@ function ListUserData({ userData }) {
         <>
           {userData.map((x) => {
             return (
-              <div className="col-3 m-1">
-                <div className="card shadow-lg bg-white rounded">
-                  <img
-                    src={x.download_url}
-                    className="card-img-top img-thumbnail"
-                    alt="..."
-                  />
-                  <div className="card-body">
-                    <h5 className={"card-title"}>{x.author}</h5>
-                    <p className={"card-text"}>
-                      <div className="col">
-                        <a
-                          href={x.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {x.url}
-                        </a>
-                      </div>
-                    </p>
+              <div
+                key={x.url}
+                className="col-sm-6 col-md-4 col-xl-3 col-xxl-2  m-1"
+              >
+                <div className="shadow-lg bg-white rounded img--card p-3">
+                  <div className="img--container">
+                    <div className="col">
+                      <a href={x.url} target="_blank" rel="noopener noreferrer">
+                        <img
+                          src={x.download_url}
+                          className="img--smart"
+                          alt="..."
+                        />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

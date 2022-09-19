@@ -4,10 +4,10 @@ function ListUsersAnimated({ count }) {
 
     for (let index = 0; index < count; index++) {
       rows.push(
-        <div className="col-sm-3 m-4">
-          <div class="card" aria-hidden="true">
+        <div key={index} className="col-sm-3 m-4">
+          <div className="card" aria-hidden="true">
             <svg
-              class="bd-placeholder-img card-img-top"
+              className="bd-placeholder-img card-img-top"
               width="100%"
               height="180"
               xmlns="http://www.w3.org/2000/svg"
@@ -20,13 +20,13 @@ function ListUsersAnimated({ count }) {
               <rect width="100%" height="100%" fill="#868e96"></rect>
             </svg>
 
-            <div class="card-body">
-              <div class="h5 card-title placeholder-glow">
-                <span class="placeholder col-6"></span>
+            <div className="card-body">
+              <div className="h5 card-title placeholder-glow">
+                <span className="placeholder col-6"></span>
               </div>
-              <p class="card-text placeholder-glow">
-                <span class="placeholder col-7"></span>
-                <span class="placeholder col-4"></span>
+              <p className="card-text placeholder-glow">
+                <span className="placeholder col-7"></span>
+                <span className="placeholder col-4"></span>
               </p>
             </div>
           </div>
@@ -38,7 +38,7 @@ function ListUsersAnimated({ count }) {
   };
 
   return (
-    <div class="row justify-content-md-center">
+    <div className="row justify-content-md-center">
       {prepareHtml().map((x) => x)}
     </div>
   );
