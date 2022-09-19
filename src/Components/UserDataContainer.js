@@ -32,13 +32,30 @@ function UserDataContainer({ page }) {
         </div>
       )}
 
-      {data && data.length === 0 && (
+      {!isLoading && data && data.length === 0 && (
         <div className="alert alert-danger" role="alert">
           No data was found!!!
         </div>
       )}
 
       {!isLoading && !error.isError && <ListUserData userData={data} />}
+
+      <button
+        type="button"
+        onClick={() => {
+          callHttp(
+            {
+              url: `https://picsum.photos/v2/list?page=${page}&limit=10`,
+            },
+            (data) => {
+              return data;
+            }
+          );
+        }}
+        className="btn btn-secondary text-align-center col"
+      >
+        new button to fetch data
+      </button>
     </>
   );
 }
